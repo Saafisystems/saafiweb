@@ -1,0 +1,592 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Privacy Policy - Saafi Systems</title>
+    <meta name="description" content="Learn how Saafi Systems protects your privacy and handles your personal data in compliance with international standards.">
+    
+    <!-- Tailwind CSS CDN -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    
+    <!-- Custom Tailwind Config -->
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        primary: {
+                            50: '#eff6ff',
+                            100: '#dbeafe',
+                            200: '#bfdbfe',
+                            300: '#93c5fd',
+                            400: '#60a5fa',
+                            500: '#3b82f6',
+                            600: '#2563eb',
+                            700: '#1d4ed8',
+                            800: '#1e40af',
+                            900: '#1e3a8a',
+                        }
+                    }
+                }
+            }
+        }
+    </script>
+    
+    <style>
+        .prose h1 { @apply text-4xl font-bold text-gray-900 mb-8; }
+        .prose h2 { @apply text-2xl font-bold text-gray-900 mt-12 mb-6 border-b border-gray-200 pb-3; }
+        .prose h3 { @apply text-xl font-semibold text-gray-900 mt-8 mb-4; }
+        .prose p { @apply text-gray-700 mb-6 leading-relaxed; }
+        .prose ul { @apply list-disc list-inside mb-6 space-y-2; }
+        .prose li { @apply text-gray-700; }
+        .prose strong { @apply font-semibold text-gray-900; }
+        .prose em { @apply italic text-gray-600; }
+        .prose a { @apply text-primary-600 hover:text-primary-700 underline; }
+        .prose blockquote { @apply border-l-4 border-primary-200 pl-6 italic text-gray-600 my-6; }
+        .prose code { @apply bg-gray-100 px-2 py-1 rounded text-sm font-mono; }
+        .prose table { @apply w-full border-collapse border border-gray-300 my-6; }
+        .prose th { @apply border border-gray-300 px-4 py-2 bg-gray-50 font-semibold text-left; }
+        .prose td { @apply border border-gray-300 px-4 py-2; }
+    </style>
+</head>
+<body class="bg-gray-50">
+    <!-- Navigation -->
+    <nav class="fixed top-0 w-full z-50 bg-white/95 backdrop-blur-md shadow-sm">
+        <div class="max-w-7xl mx-auto px-6">
+            <div class="flex items-center justify-between h-16">
+                <div class="flex items-center space-x-3">
+                    <img src="assets/images/logo.png" alt="Saafi Systems" class="w-8 h-8">
+                    <span class="text-lg font-bold text-gray-900">Saafi Systems</span>
+                </div>
+                
+                <div class="flex items-center space-x-6">
+                    <a href="index.html" class="text-gray-700 hover:text-primary-600 transition-colors">Home</a>
+                    <a href="portfolio.html" class="text-gray-700 hover:text-primary-600 transition-colors">Portfolio</a>
+                    <a href="testimonials.html" class="text-gray-700 hover:text-primary-600 transition-colors">Testimonials</a>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Header -->
+    <header class="bg-gradient-to-br from-primary-600 to-purple-700 pt-24 pb-16">
+        <div class="max-w-4xl mx-auto px-6 text-center">
+            <div class="inline-flex items-center px-4 py-2 bg-white/20 rounded-full text-white text-sm font-medium mb-6">
+                <svg class="w-4 h-4 mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.02 12.02 0 003 9c0 5.591 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.042-.133-2.052-.382-3.016z"></path>
+                </svg>
+                Legal Document
+            </div>
+            <h1 class="text-4xl md:text-5xl font-bold text-white mb-4">Privacy Policy</h1>
+            <p class="text-xl text-blue-100 max-w-2xl mx-auto">
+                Your privacy is our priority. Learn how we collect, use, and protect your personal information.
+            </p>
+            <div class="mt-8 text-blue-100">
+                <p><strong>Last Updated:</strong> January 15, 2024</p>
+                <p><strong>Effective Date:</strong> January 15, 2024</p>
+            </div>
+        </div>
+    </header>
+
+    <!-- Content -->
+    <main class="max-w-4xl mx-auto px-6 py-16">
+        <div class="bg-white rounded-2xl shadow-lg p-8 md:p-12">
+            <!-- Table of Contents -->
+            <div class="bg-gray-50 rounded-xl p-6 mb-12">
+                <h2 class="text-lg font-semibold text-gray-900 mb-4">Table of Contents</h2>
+                <nav class="grid grid-cols-1 md:grid-cols-2 gap-2">
+                    <a href="#overview" class="text-primary-600 hover:text-primary-700 text-sm">1. Overview</a>
+                    <a href="#information-collection" class="text-primary-600 hover:text-primary-700 text-sm">2. Information We Collect</a>
+                    <a href="#information-use" class="text-primary-600 hover:text-primary-700 text-sm">3. How We Use Information</a>
+                    <a href="#information-sharing" class="text-primary-600 hover:text-primary-700 text-sm">4. Information Sharing</a>
+                    <a href="#data-security" class="text-primary-600 hover:text-primary-700 text-sm">5. Data Security</a>
+                    <a href="#data-retention" class="text-primary-600 hover:text-primary-700 text-sm">6. Data Retention</a>
+                    <a href="#your-rights" class="text-primary-600 hover:text-primary-700 text-sm">7. Your Rights</a>
+                    <a href="#cookies" class="text-primary-600 hover:text-primary-700 text-sm">8. Cookies & Tracking</a>
+                    <a href="#international-transfers" class="text-primary-600 hover:text-primary-700 text-sm">9. International Transfers</a>
+                    <a href="#children-privacy" class="text-primary-600 hover:text-primary-700 text-sm">10. Children's Privacy</a>
+                    <a href="#changes" class="text-primary-600 hover:text-primary-700 text-sm">11. Policy Changes</a>
+                    <a href="#contact" class="text-primary-600 hover:text-primary-700 text-sm">12. Contact Information</a>
+                </nav>
+            </div>
+
+            <div class="prose max-w-none">
+                <section id="overview">
+                    <h2>1. Overview</h2>
+                    <p>
+                        Saafi Systems ("we," "our," or "us") is committed to protecting your privacy and ensuring the security of your personal information. This Privacy Policy explains how we collect, use, disclose, and safeguard your information when you visit our website, use our services, or interact with us.
+                    </p>
+                    <p>
+                        This policy applies to all Saafi Systems services, including our SaaS platforms, PaaS solutions, education management systems, ERP software, and EMR applications. By using our services, you consent to the data practices described in this policy.
+                    </p>
+                    
+                    <div class="bg-blue-50 border-l-4 border-blue-400 p-6 my-8">
+                        <div class="flex">
+                            <div class="flex-shrink-0">
+                                <svg class="h-5 w-5 text-blue-400" fill="currentColor" viewBox="0 0 20 20">
+                                    <path fill-rule="evenodd" d="M8.257 3.099c.765-1.36 2.722-1.36 3.486 0l5.58 9.92c.75 1.334-.213 2.98-1.742 2.98H4.42c-1.53 0-2.493-1.646-1.743-2.98l5.58-9.92zM11 13a1 1 0 11-2 0 1 1 0 012 0zm-1-8a1 1 0 00-1 1v3a1 1 0 002 0V6a1 1 0 00-1-1z" clip-rule="evenodd"></path>
+                                </svg>
+                            </div>
+                            <div class="ml-3">
+                                <p class="text-sm text-blue-700">
+                                    <strong>Important:</strong> This policy is compliant with GDPR, CCPA, HIPAA, and other international privacy regulations. We are committed to maintaining the highest standards of data protection.
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+
+                <section id="information-collection">
+                    <h2>2. Information We Collect</h2>
+                    
+                    <h3>2.1 Personal Information</h3>
+                    <p>We collect personal information that you voluntarily provide to us when you:</p>
+                    <ul>
+                        <li>Register for an account or subscribe to our services</li>
+                        <li>Request information about our products or services</li>
+                        <li>Participate in surveys, contests, or promotional activities</li>
+                        <li>Contact us for customer support</li>
+                        <li>Apply for employment opportunities</li>
+                    </ul>
+                    
+                    <p>This information may include:</p>
+                    <ul>
+                        <li><strong>Identity Data:</strong> Name, username, title, date of birth</li>
+                        <li><strong>Contact Data:</strong> Email address, telephone numbers, billing and delivery addresses</li>
+                        <li><strong>Financial Data:</strong> Bank account and payment card details</li>
+                        <li><strong>Transaction Data:</strong> Details about payments and services you have purchased</li>
+                        <li><strong>Technical Data:</strong> IP address, browser type, time zone setting, operating system</li>
+                        <li><strong>Profile Data:</strong> Username, password, purchases, preferences, feedback</li>
+                        <li><strong>Usage Data:</strong> Information about how you use our website and services</li>
+                        <li><strong>Marketing Data:</strong> Your preferences in receiving marketing communications</li>
+                    </ul>
+
+                    <h3>2.2 Automatically Collected Information</h3>
+                    <p>When you access our services, we automatically collect certain information, including:</p>
+                    <ul>
+                        <li>Log files and server data</li>
+                        <li>Device information (device type, operating system, browser type)</li>
+                        <li>Usage patterns and preferences</li>
+                        <li>Location data (with your consent)</li>
+                        <li>Cookies and similar tracking technologies</li>
+                    </ul>
+
+                    <h3>2.3 Special Categories of Data</h3>
+                    <p>For our healthcare solutions (EMR systems), we may process special categories of personal data, including health information, but only:</p>
+                    <ul>
+                        <li>With your explicit consent</li>
+                        <li>When necessary for healthcare purposes</li>
+                        <li>In compliance with applicable healthcare regulations (HIPAA, etc.)</li>
+                        <li>Under strict security and confidentiality measures</li>
+                    </ul>
+                </section>
+
+                <section id="information-use">
+                    <h2>3. How We Use Your Information</h2>
+                    
+                    <p>We use your personal information for the following purposes:</p>
+                    
+                    <h3>3.1 Service Provision</h3>
+                    <ul>
+                        <li>Provide, operate, and maintain our services</li>
+                        <li>Process transactions and manage your account</li>
+                        <li>Deliver customer support and respond to inquiries</li>
+                        <li>Send service-related communications</li>
+                    </ul>
+
+                    <h3>3.2 Service Improvement</h3>
+                    <ul>
+                        <li>Analyze usage patterns to improve our services</li>
+                        <li>Develop new features and functionality</li>
+                        <li>Conduct research and analytics</li>
+                        <li>Perform quality assurance and testing</li>
+                    </ul>
+
+                    <h3>3.3 Communication</h3>
+                    <ul>
+                        <li>Send marketing communications (with your consent)</li>
+                        <li>Provide updates about our services</li>
+                        <li>Respond to your comments and questions</li>
+                        <li>Send administrative information</li>
+                    </ul>
+
+                    <h3>3.4 Legal and Security</h3>
+                    <ul>
+                        <li>Comply with legal obligations</li>
+                        <li>Protect against fraud and security threats</li>
+                        <li>Enforce our terms of service</li>
+                        <li>Resolve disputes and troubleshoot problems</li>
+                    </ul>
+
+                    <div class="bg-green-50 border-l-4 border-green-400 p-6 my-8">
+                        <h4 class="text-lg font-semibold text-green-800 mb-2">Legal Basis for Processing</h4>
+                        <p class="text-green-700 text-sm">
+                            We process your personal data based on: (1) Your consent, (2) Performance of a contract, (3) Compliance with legal obligations, (4) Protection of vital interests, (5) Performance of tasks in the public interest, or (6) Legitimate interests pursued by us or third parties.
+                        </p>
+                    </div>
+                </section>
+
+                <section id="information-sharing">
+                    <h2>4. Information Sharing and Disclosure</h2>
+                    
+                    <p>We do not sell, trade, or otherwise transfer your personal information to third parties without your consent, except as described in this policy. We may share your information in the following circumstances:</p>
+                    
+                    <h3>4.1 Service Providers</h3>
+                    <p>We may share your information with trusted third-party service providers who assist us in:</p>
+                    <ul>
+                        <li>Cloud hosting and data storage</li>
+                        <li>Payment processing</li>
+                        <li>Email delivery and communication services</li>
+                        <li>Analytics and performance monitoring</li>
+                        <li>Customer support services</li>
+                        <li>Security and fraud prevention</li>
+                    </ul>
+                    <p>These service providers are contractually obligated to protect your information and use it only for the specified purposes.</p>
+
+                    <h3>4.2 Business Transfers</h3>
+                    <p>In the event of a merger, acquisition, or sale of all or part of our business, your personal information may be transferred to the acquiring entity, subject to the same privacy protections.</p>
+
+                    <h3>4.3 Legal Requirements</h3>
+                    <p>We may disclose your information when required by law or in response to:</p>
+                    <ul>
+                        <li>Court orders or legal process</li>
+                        <li>Government investigations</li>
+                        <li>Regulatory compliance requirements</li>
+                        <li>Protection of our rights and property</li>
+                        <li>Prevention of fraud or illegal activities</li>
+                    </ul>
+
+                    <h3>4.4 Consent-Based Sharing</h3>
+                    <p>We may share your information with your explicit consent for specific purposes, such as:</p>
+                    <ul>
+                        <li>Integration with third-party applications</li>
+                        <li>Participation in joint marketing campaigns</li>
+                        <li>Research and development partnerships</li>
+                    </ul>
+                </section>
+
+                <section id="data-security">
+                    <h2>5. Data Security</h2>
+                    
+                    <p>We implement comprehensive security measures to protect your personal information against unauthorized access, alteration, disclosure, or destruction. Our security practices include:</p>
+                    
+                    <h3>5.1 Technical Safeguards</h3>
+                    <ul>
+                        <li><strong>Encryption:</strong> Data is encrypted in transit using TLS 1.3 and at rest using AES-256</li>
+                        <li><strong>Access Controls:</strong> Multi-factor authentication and role-based access controls</li>
+                        <li><strong>Network Security:</strong> Firewalls, intrusion detection systems, and regular security monitoring</li>
+                        <li><strong>Secure Infrastructure:</strong> SOC 2 Type II certified data centers with 24/7 monitoring</li>
+                        <li><strong>Regular Updates:</strong> Automated security patches and vulnerability assessments</li>
+                    </ul>
+
+                    <h3>5.2 Administrative Safeguards</h3>
+                    <ul>
+                        <li>Employee background checks and security training</li>
+                        <li>Confidentiality agreements and access restrictions</li>
+                        <li>Incident response procedures and breach notification protocols</li>
+                        <li>Regular security audits and compliance assessments</li>
+                    </ul>
+
+                    <h3>5.3 Physical Safeguards</h3>
+                    <ul>
+                        <li>Secure data center facilities with biometric access controls</li>
+                        <li>Environmental controls and redundant power systems</li>
+                        <li>Secure disposal of hardware and storage media</li>
+                    </ul>
+
+                    <div class="bg-yellow-50 border-l-4 border-yellow-400 p-6 my-8">
+                        <div class="flex">
+                            <div class="flex-shrink-0">
+                                <svg class="h-5 w-5 text-yellow-400" fill="currentColor" viewBox="0 0 20 20">
+                                    <path fill-rule="evenodd" d="M8.257 3.099c.765-1.36 2.722-1.36 3.486 0l5.58 9.92c.75 1.334-.213 2.98-1.742 2.98H4.42c-1.53 0-2.493-1.646-1.743-2.98l5.58-9.92zM11 13a1 1 0 11-2 0 1 1 0 012 0zm-1-8a1 1 0 00-1 1v3a1 1 0 002 0V6a1 1 0 00-1-1z" clip-rule="evenodd"></path>
+                                </svg>
+                            </div>
+                            <div class="ml-3">
+                                <p class="text-sm text-yellow-700">
+                                    <strong>Security Notice:</strong> While we implement industry-leading security measures, no method of transmission over the internet or electronic storage is 100% secure. We continuously monitor and improve our security practices.
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+
+                <section id="data-retention">
+                    <h2>6. Data Retention</h2>
+                    
+                    <p>We retain your personal information only for as long as necessary to fulfill the purposes outlined in this privacy policy, unless a longer retention period is required or permitted by law.</p>
+                    
+                    <h3>6.1 Retention Periods</h3>
+                    <table>
+                        <thead>
+                            <tr>
+                                <th>Data Type</th>
+                                <th>Retention Period</th>
+                                <th>Legal Basis</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td>Account Information</td>
+                                <td>Duration of account + 3 years</td>
+                                <td>Contract performance, legal obligations</td>
+                            </tr>
+                            <tr>
+                                <td>Transaction Records</td>
+                                <td>7 years</td>
+                                <td>Tax and accounting requirements</td>
+                            </tr>
+                            <tr>
+                                <td>Marketing Data</td>
+                                <td>Until consent withdrawn + 1 year</td>
+                                <td>Consent, legitimate interests</td>
+                            </tr>
+                            <tr>
+                                <td>Support Communications</td>
+                                <td>3 years</td>
+                                <td>Legitimate interests, quality assurance</td>
+                            </tr>
+                            <tr>
+                                <td>Healthcare Data (EMR)</td>
+                                <td>As required by applicable law</td>
+                                <td>Legal obligations, vital interests</td>
+                            </tr>
+                        </tbody>
+                    </table>
+
+                    <h3>6.2 Data Deletion</h3>
+                    <p>When personal information is no longer needed, we securely delete or anonymize it using industry-standard methods. You may also request deletion of your personal information, subject to certain legal and contractual obligations.</p>
+                </section>
+
+                <section id="your-rights">
+                    <h2>7. Your Rights and Choices</h2>
+                    
+                    <p>Depending on your location and applicable laws, you may have the following rights regarding your personal information:</p>
+                    
+                    <h3>7.1 Access and Portability</h3>
+                    <ul>
+                        <li><strong>Right to Access:</strong> Request a copy of the personal information we hold about you</li>
+                        <li><strong>Right to Portability:</strong> Receive your data in a structured, machine-readable format</li>
+                    </ul>
+
+                    <h3>7.2 Correction and Updates</h3>
+                    <ul>
+                        <li><strong>Right to Rectification:</strong> Correct inaccurate or incomplete personal information</li>
+                        <li><strong>Account Management:</strong> Update your preferences and profile information</li>
+                    </ul>
+
+                    <h3>7.3 Deletion and Restriction</h3>
+                    <ul>
+                        <li><strong>Right to Erasure:</strong> Request deletion of your personal information</li>
+                        <li><strong>Right to Restriction:</strong> Limit how we process your personal information</li>
+                    </ul>
+
+                    <h3>7.4 Objection and Consent</h3>
+                    <ul>
+                        <li><strong>Right to Object:</strong> Object to processing based on legitimate interests</li>
+                        <li><strong>Withdraw Consent:</strong> Withdraw consent for processing at any time</li>
+                        <li><strong>Marketing Opt-out:</strong> Unsubscribe from marketing communications</li>
+                    </ul>
+
+                    <div class="bg-blue-50 rounded-xl p-6 my-8">
+                        <h4 class="text-lg font-semibold text-blue-900 mb-4">How to Exercise Your Rights</h4>
+                        <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
+                            <div>
+                                <h5 class="font-semibold text-blue-800 mb-2">Contact Methods:</h5>
+                                <ul class="text-sm text-blue-700 space-y-1">
+                                    <li>• Email: privacy@saafisystems.com</li>
+                                    <li>• Phone: +252 63 888 0930</li>
+                                    <li>• Online: Account settings portal</li>
+                                </ul>
+                            </div>
+                            <div>
+                                <h5 class="font-semibold text-blue-800 mb-2">Response Time:</h5>
+                                <ul class="text-sm text-blue-700 space-y-1">
+                                    <li>• Standard requests: 30 days</li>
+                                    <li>• Complex requests: 60 days</li>
+                                    <li>• Urgent requests: 72 hours</li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+
+                <section id="cookies">
+                    <h2>8. Cookies and Tracking Technologies</h2>
+                    
+                    <p>We use cookies and similar tracking technologies to enhance your experience, analyze usage patterns, and provide personalized content.</p>
+                    
+                    <h3>8.1 Types of Cookies</h3>
+                    <table>
+                        <thead>
+                            <tr>
+                                <th>Cookie Type</th>
+                                <th>Purpose</th>
+                                <th>Duration</th>
+                                <th>Consent Required</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td>Essential</td>
+                                <td>Website functionality and security</td>
+                                <td>Session/1 year</td>
+                                <td>No</td>
+                            </tr>
+                            <tr>
+                                <td>Performance</td>
+                                <td>Analytics and site optimization</td>
+                                <td>2 years</td>
+                                <td>Yes</td>
+                            </tr>
+                            <tr>
+                                <td>Functional</td>
+                                <td>Personalization and preferences</td>
+                                <td>1 year</td>
+                                <td>Yes</td>
+                            </tr>
+                            <tr>
+                                <td>Marketing</td>
+                                <td>Advertising and remarketing</td>
+                                <td>1-2 years</td>
+                                <td>Yes</td>
+                            </tr>
+                        </tbody>
+                    </table>
+
+                    <h3>8.2 Cookie Management</h3>
+                    <p>You can control cookies through:</p>
+                    <ul>
+                        <li>Browser settings and preferences</li>
+                        <li>Our cookie consent banner</li>
+                        <li>Third-party opt-out tools</li>
+                        <li>Account privacy settings</li>
+                    </ul>
+                </section>
+
+                <section id="international-transfers">
+                    <h2>9. International Data Transfers</h2>
+                    
+                    <p>Your personal information may be transferred to and processed in countries other than your country of residence. We ensure appropriate safeguards are in place for international transfers:</p>
+                    
+                    <ul>
+                        <li><strong>Adequacy Decisions:</strong> Transfers to countries with adequate data protection laws</li>
+                        <li><strong>Standard Contractual Clauses:</strong> EU-approved contractual protections</li>
+                        <li><strong>Binding Corporate Rules:</strong> Internal data protection standards</li>
+                        <li><strong>Certification Schemes:</strong> Privacy Shield and similar frameworks</li>
+                    </ul>
+                </section>
+
+                <section id="children-privacy">
+                    <h2>10. Children's Privacy</h2>
+                    
+                    <p>Our services are not intended for children under 13 years of age. We do not knowingly collect personal information from children under 13. If we become aware that we have collected personal information from a child under 13, we will take steps to delete such information promptly.</p>
+                    
+                    <p>For our education management systems, we may process student information under the supervision of educational institutions, in compliance with FERPA and other applicable regulations.</p>
+                </section>
+
+                <section id="changes">
+                    <h2>11. Changes to This Privacy Policy</h2>
+                    
+                    <p>We may update this privacy policy from time to time to reflect changes in our practices, technology, legal requirements, or other factors. We will notify you of any material changes by:</p>
+                    
+                    <ul>
+                        <li>Posting the updated policy on our website</li>
+                        <li>Sending email notifications to registered users</li>
+                        <li>Displaying prominent notices in our applications</li>
+                        <li>Requesting renewed consent where required</li>
+                    </ul>
+                    
+                    <p>Your continued use of our services after the effective date of the updated policy constitutes acceptance of the changes.</p>
+                </section>
+
+                <section id="contact">
+                    <h2>12. Contact Information</h2>
+                    
+                    <p>If you have any questions, concerns, or requests regarding this privacy policy or our data practices, please contact us:</p>
+                    
+                    <div class="bg-gray-50 rounded-xl p-6 my-8">
+                        <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+                            <div>
+                                <h4 class="font-semibold text-gray-900 mb-3">Data Protection Officer</h4>
+                                <p class="text-gray-700 text-sm mb-2">Email: privacy@saafisystems.com</p>
+                                <p class="text-gray-700 text-sm mb-2">Phone: +252 63 888 0930</p>
+                                <p class="text-gray-700 text-sm">Response Time: 48 hours</p>
+                            </div>
+                            <div>
+                                <h4 class="font-semibold text-gray-900 mb-3">Legal Department</h4>
+                                <p class="text-gray-700 text-sm mb-2">Email: legal@saafisystems.com</p>
+                                <p class="text-gray-700 text-sm mb-2">Website: www.saafisystems.com</p>
+                                <p class="text-gray-700 text-sm">Business Hours: 9 AM - 6 PM GMT</p>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <p>You also have the right to lodge a complaint with your local data protection authority if you believe we have not addressed your concerns adequately.</p>
+                </section>
+            </div>
+        </div>
+    </main>
+
+    <!-- Footer -->
+    <footer class="bg-gray-900 text-white py-12">
+        <div class="max-w-7xl mx-auto px-6">
+            <div class="flex flex-col md:flex-row justify-between items-center">
+                <div class="flex items-center space-x-3 mb-4 md:mb-0">
+                    <img src="assets/images/logo.png" alt="Saafi Systems" class="w-8 h-8">
+                    <span class="text-lg font-bold">Saafi Systems</span>
+                </div>
+                
+                <div class="flex space-x-6 text-sm">
+                    <a href="index.html" class="text-gray-300 hover:text-white transition-colors">Home</a>
+                    <a href="terms.html" class="text-gray-300 hover:text-white transition-colors">Terms of Service</a>
+                    <a href="#" class="text-gray-300 hover:text-white transition-colors">Cookie Policy</a>
+                </div>
+            </div>
+            
+            <div class="border-t border-gray-800 mt-8 pt-8 text-center text-gray-400 text-sm">
+                <p>&copy; 2024 Saafi Systems. All rights reserved. | This privacy policy is effective as of January 15, 2024.</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- JavaScript -->
+    <script>
+        // Smooth scrolling for anchor links
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                const target = document.querySelector(this.getAttribute('href'));
+                if (target) {
+                    target.scrollIntoView({
+                        behavior: 'smooth',
+                        block: 'start'
+                    });
+                }
+            });
+        });
+
+        // Highlight current section in table of contents
+        const sections = document.querySelectorAll('section[id]');
+        const navLinks = document.querySelectorAll('nav a[href^="#"]');
+
+        window.addEventListener('scroll', () => {
+            let current = '';
+            sections.forEach(section => {
+                const sectionTop = section.offsetTop;
+                const sectionHeight = section.clientHeight;
+                if (window.pageYOffset >= sectionTop - 200) {
+                    current = section.getAttribute('id');
+                }
+            });
+
+            navLinks.forEach(link => {
+                link.classList.remove('font-semibold', 'text-primary-700');
+                if (link.getAttribute('href') === `#${current}`) {
+                    link.classList.add('font-semibold', 'text-primary-700');
+                }
+            });
+        });
+    </script>
+</body>
+</html>

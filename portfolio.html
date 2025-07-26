@@ -1,0 +1,763 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Portfolio - Saafi Systems</title>
+    <meta name="description" content="Explore our innovative SaaS and PaaS solutions that have transformed businesses across education, healthcare, and enterprise sectors.">
+    
+    <!-- Tailwind CSS CDN -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    
+    <!-- Custom Tailwind Config -->
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        primary: {
+                            50: '#eff6ff',
+                            100: '#dbeafe',
+                            200: '#bfdbfe',
+                            300: '#93c5fd',
+                            400: '#60a5fa',
+                            500: '#3b82f6',
+                            600: '#2563eb',
+                            700: '#1d4ed8',
+                            800: '#1e40af',
+                            900: '#1e3a8a',
+                        }
+                    },
+                    animation: {
+                        'fade-in': 'fadeIn 0.8s ease-out',
+                        'slide-up': 'slideUp 0.8s ease-out',
+                        'scale-in': 'scaleIn 0.5s ease-out',
+                    },
+                    keyframes: {
+                        fadeIn: {
+                            '0%': { opacity: '0' },
+                            '100%': { opacity: '1' }
+                        },
+                        slideUp: {
+                            '0%': { opacity: '0', transform: 'translateY(30px)' },
+                            '100%': { opacity: '1', transform: 'translateY(0)' }
+                        },
+                        scaleIn: {
+                            '0%': { opacity: '0', transform: 'scale(0.9)' },
+                            '100%': { opacity: '1', transform: 'scale(1)' }
+                        }
+                    }
+                }
+            }
+        }
+    </script>
+    
+    <style>
+        .hover-lift {
+            transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+        }
+        
+        .hover-lift:hover {
+            transform: translateY(-8px);
+            box-shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.25);
+        }
+        
+        .filter-btn.active {
+            background: linear-gradient(135deg, #2563eb, #7c3aed);
+            color: white;
+        }
+    </style>
+</head>
+<body class="bg-gray-50">
+    <!-- Navigation -->
+    <nav class="fixed top-0 w-full z-50 bg-white/95 backdrop-blur-md shadow-sm">
+        <div class="max-w-7xl mx-auto px-6">
+            <div class="flex items-center justify-between h-16">
+                <div class="flex items-center space-x-3">
+                    <img src="assets/images/logo.png" alt="Saafi Systems" class="w-8 h-8">
+                    <span class="text-lg font-bold text-gray-900">Saafi Systems</span>
+                </div>
+                
+                <div class="flex items-center space-x-6">
+                    <a href="index.html" class="text-gray-700 hover:text-primary-600 transition-colors">Home</a>
+                    <a href="portfolio.html" class="text-primary-600 font-semibold">Portfolio</a>
+                    <a href="testimonials.html" class="text-gray-700 hover:text-primary-600 transition-colors">Testimonials</a>
+                    <a href="index.html#contact" class="bg-primary-600 hover:bg-primary-700 text-white px-4 py-2 rounded-lg transition-colors">Contact</a>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Header -->
+    <header class="bg-gradient-to-br from-primary-600 to-purple-700 pt-24 pb-16">
+        <div class="max-w-7xl mx-auto px-6 text-center">
+            <div class="inline-flex items-center px-4 py-2 bg-white/20 rounded-full text-white text-sm font-medium mb-6">
+                <svg class="w-4 h-4 mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 11H5m14 0a2 2 0 012 2v6a2 2 0 01-2 2H5a2 2 0 01-2-2v-6a2 2 0 012-2m14 0V9a2 2 0 00-2-2M5 11V9a2 2 0 012-2m0 0V5a2 2 0 012-2h6a2 2 0 012 2v2M7 7h10"></path>
+                </svg>
+                Our Work
+            </div>
+            <h1 class="text-4xl md:text-6xl font-bold text-white mb-6">Innovation Portfolio</h1>
+            <p class="text-xl text-blue-100 max-w-3xl mx-auto mb-8">
+                Discover how we've transformed businesses across industries with our cutting-edge SaaS and PaaS solutions
+            </p>
+            
+            <!-- Stats -->
+            <div class="grid grid-cols-2 md:grid-cols-4 gap-8 max-w-4xl mx-auto">
+                <div class="text-center">
+                    <div class="text-3xl font-bold text-white mb-2">500+</div>
+                    <div class="text-blue-100 text-sm">Projects Delivered</div>
+                </div>
+                <div class="text-center">
+                    <div class="text-3xl font-bold text-white mb-2">50+</div>
+                    <div class="text-blue-100 text-sm">Countries Served</div>
+                </div>
+                <div class="text-center">
+                    <div class="text-3xl font-bold text-white mb-2">1M+</div>
+                    <div class="text-blue-100 text-sm">Users Impacted</div>
+                </div>
+                <div class="text-center">
+                    <div class="text-3xl font-bold text-white mb-2">99.9%</div>
+                    <div class="text-blue-100 text-sm">Uptime Achieved</div>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <!-- Filter Buttons -->
+    <section class="py-12 bg-white">
+        <div class="max-w-7xl mx-auto px-6">
+            <div class="flex flex-wrap justify-center gap-4 mb-12">
+                <button class="filter-btn active px-6 py-3 rounded-full border border-gray-300 text-gray-700 hover:bg-primary-600 hover:text-white transition-all duration-300" data-filter="all">
+                    All Projects
+                </button>
+                <button class="filter-btn px-6 py-3 rounded-full border border-gray-300 text-gray-700 hover:bg-primary-600 hover:text-white transition-all duration-300" data-filter="education">
+                    Education
+                </button>
+                " data-filter="education">
+                    Education
+                </button>
+                <button class="filter-btn px-6 py-3 rounded-full border border-gray-300 text-gray-700 hover:bg-primary-600 hover:text-white transition-all duration-300" data-filter="healthcare">
+                    Healthcare
+                </button>
+                <button class="filter-btn px-6 py-3 rounded-full border border-gray-300 text-gray-700 hover:bg-primary-600 hover:text-white transition-all duration-300" data-filter="business">
+                    Business
+                </button>
+                <button class="filter-btn px-6 py-3 rounded-full border border-gray-300 text-gray-700 hover:bg-primary-600 hover:text-white transition-all duration-300" data-filter="custom">
+                    Custom Solutions
+                </button>
+            </div>
+        </div>
+    </section>
+
+    <!-- Portfolio Grid -->
+    <section class="pb-24 bg-gray-50">
+        <div class="max-w-7xl mx-auto px-6">
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8" id="portfolio-grid">
+                
+                <!-- EduManage Pro -->
+                <div class="portfolio-item hover-lift bg-white rounded-2xl overflow-hidden shadow-lg" data-category="education">
+                    <div class="relative overflow-hidden group">
+                        <img src="/placeholder.svg?height=250&width=400&text=EduManage+Pro+Dashboard" alt="EduManage Pro" class="w-full h-64 object-cover group-hover:scale-110 transition-transform duration-500">
+                        <div class="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300">
+                            <div class="absolute bottom-4 right-4 flex space-x-2">
+                                <button class="w-10 h-10 bg-white/20 backdrop-blur-sm rounded-lg flex items-center justify-center hover:bg-white/30 transition-colors">
+                                    <svg class="w-5 h-5 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14"></path>
+                                    </svg>
+                                </button>
+                                <button class="w-10 h-10 bg-white/20 backdrop-blur-sm rounded-lg flex items-center justify-center hover:bg-white/30 transition-colors">
+                                    <svg class="w-5 h-5 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4.318 6.318a4.5 4.5 0 000 6.364L12 20.364l7.682-7.682a4.5 4.5 0 00-6.364-6.364L12 7.636l-1.318-1.318a4.5 4.5 0 00-6.364 0z"></path>
+                                    </svg>
+                                </button>
+                            </div>
+                        </div>
+                        <div class="absolute top-4 left-4">
+                            <span class="px-3 py-1 bg-blue-500 text-white text-xs rounded-full font-medium">Education</span>
+                        </div>
+                    </div>
+                    <div class="p-6">
+                        <h3 class="text-xl font-bold text-gray-900 mb-3">EduManage Pro</h3>
+                        <p class="text-gray-600 mb-4 leading-relaxed">Comprehensive student information system with integrated learning management, attendance tracking, and parent communication portals.</p>
+                        
+                        <div class="mb-4">
+                            <h4 class="font-semibold text-gray-900 mb-2 text-sm">Key Features:</h4>
+                            <div class="grid grid-cols-2 gap-2">
+                                <div class="flex items-center text-xs text-gray-600">
+                                    <div class="w-1.5 h-1.5 bg-blue-500 rounded-full mr-2"></div>
+                                    Student Management
+                                </div>
+                                <div class="flex items-center text-xs text-gray-600">
+                                    <div class="w-1.5 h-1.5 bg-blue-500 rounded-full mr-2"></div>
+                                    Grade Tracking
+                                </div>
+                                <div class="flex items-center text-xs text-gray-600">
+                                    <div class="w-1.5 h-1.5 bg-blue-500 rounded-full mr-2"></div>
+                                    Parent Portals
+                                </div>
+                                <div class="flex items-center text-xs text-gray-600">
+                                    <div class="w-1.5 h-1.5 bg-blue-500 rounded-full mr-2"></div>
+                                    Analytics
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <div class="flex flex-wrap gap-2 mb-4">
+                            <span class="px-2 py-1 bg-gray-100 text-gray-700 text-xs rounded">React</span>
+                            <span class="px-2 py-1 bg-gray-100 text-gray-700 text-xs rounded">Node.js</span>
+                            <span class="px-2 py-1 bg-gray-100 text-gray-700 text-xs rounded">PostgreSQL</span>
+                            <span class="px-2 py-1 bg-gray-100 text-gray-700 text-xs rounded">AWS</span>
+                        </div>
+                        
+                        <div class="flex items-center justify-between">
+                            <div class="text-sm text-gray-500">25,000+ Students</div>
+                            <button class="text-blue-600 hover:text-blue-700 font-semibold text-sm">View Details →</button>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- HealthCare EMR -->
+                <div class="portfolio-item hover-lift bg-white rounded-2xl overflow-hidden shadow-lg" data-category="healthcare">
+                    <div class="relative overflow-hidden group">
+                        <img src="/placeholder.svg?height=250&width=400&text=Healthcare+EMR+System" alt="Healthcare EMR" class="w-full h-64 object-cover group-hover:scale-110 transition-transform duration-500">
+                        <div class="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300">
+                            <div class="absolute bottom-4 right-4 flex space-x-2">
+                                <button class="w-10 h-10 bg-white/20 backdrop-blur-sm rounded-lg flex items-center justify-center hover:bg-white/30 transition-colors">
+                                    <svg class="w-5 h-5 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14"></path>
+                                    </svg>
+                                </button>
+                                <button class="w-10 h-10 bg-white/20 backdrop-blur-sm rounded-lg flex items-center justify-center hover:bg-white/30 transition-colors">
+                                    <svg class="w-5 h-5 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4.318 6.318a4.5 4.5 0 000 6.364L12 20.364l7.682-7.682a4.5 4.5 0 00-6.364-6.364L12 7.636l-1.318-1.318a4.5 4.5 0 00-6.364 0z"></path>
+                                    </svg>
+                                </button>
+                            </div>
+                        </div>
+                        <div class="absolute top-4 left-4">
+                            <span class="px-3 py-1 bg-green-500 text-white text-xs rounded-full font-medium">Healthcare</span>
+                        </div>
+                    </div>
+                    <div class="p-6">
+                        <h3 class="text-xl font-bold text-gray-900 mb-3">HealthCare EMR</h3>
+                        <p class="text-gray-600 mb-4 leading-relaxed">HIPAA-compliant electronic medical records system with patient management, appointment scheduling, and integrated billing.</p>
+                        
+                        <div class="mb-4">
+                            <h4 class="font-semibold text-gray-900 mb-2 text-sm">Key Features:</h4>
+                            <div class="grid grid-cols-2 gap-2">
+                                <div class="flex items-center text-xs text-gray-600">
+                                    <div class="w-1.5 h-1.5 bg-green-500 rounded-full mr-2"></div>
+                                    Patient Records
+                                </div>
+                                <div class="flex items-center text-xs text-gray-600">
+                                    <div class="w-1.5 h-1.5 bg-green-500 rounded-full mr-2"></div>
+                                    Scheduling
+                                </div>
+                                <div class="flex items-center text-xs text-gray-600">
+                                    <div class="w-1.5 h-1.5 bg-green-500 rounded-full mr-2"></div>
+                                    HIPAA Compliance
+                                </div>
+                                <div class="flex items-center text-xs text-gray-600">
+                                    <div class="w-1.5 h-1.5 bg-green-500 rounded-full mr-2"></div>
+                                    Billing Integration
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <div class="flex flex-wrap gap-2 mb-4">
+                            <span class="px-2 py-1 bg-gray-100 text-gray-700 text-xs rounded">Vue.js</span>
+                            <span class="px-2 py-1 bg-gray-100 text-gray-700 text-xs rounded">Python</span>
+                            <span class="px-2 py-1 bg-gray-100 text-gray-700 text-xs rounded">MongoDB</span>
+                            <span class="px-2 py-1 bg-gray-100 text-gray-700 text-xs rounded">Azure</span>
+                        </div>
+                        
+                        <div class="flex items-center justify-between">
+                            <div class="text-sm text-gray-500">10,000+ Patients</div>
+                            <button class="text-green-600 hover:text-green-700 font-semibold text-sm">View Details →</button>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Enterprise ERP Suite -->
+                <div class="portfolio-item hover-lift bg-white rounded-2xl overflow-hidden shadow-lg" data-category="business">
+                    <div class="relative overflow-hidden group">
+                        <img src="/placeholder.svg?height=250&width=400&text=Enterprise+ERP+Dashboard" alt="Enterprise ERP" class="w-full h-64 object-cover group-hover:scale-110 transition-transform duration-500">
+                        <div class="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300">
+                            <div class="absolute bottom-4 right-4 flex space-x-2">
+                                <button class="w-10 h-10 bg-white/20 backdrop-blur-sm rounded-lg flex items-center justify-center hover:bg-white/30 transition-colors">
+                                    <svg class="w-5 h-5 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14"></path>
+                                    </svg>
+                                </button>
+                                <button class="w-10 h-10 bg-white/20 backdrop-blur-sm rounded-lg flex items-center justify-center hover:bg-white/30 transition-colors">
+                                    <svg class="w-5 h-5 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4.318 6.318a4.5 4.5 0 000 6.364L12 20.364l7.682-7.682a4.5 4.5 0 00-6.364-6.364L12 7.636l-1.318-1.318a4.5 4.5 0 00-6.364 0z"></path>
+                                    </svg>
+                                </button>
+                            </div>
+                        </div>
+                        <div class="absolute top-4 left-4">
+                            <span class="px-3 py-1 bg-purple-500 text-white text-xs rounded-full font-medium">Business</span>
+                        </div>
+                    </div>
+                    <div class="p-6">
+                        <h3 class="text-xl font-bold text-gray-900 mb-3">Enterprise ERP Suite</h3>
+                        <p class="text-gray-600 mb-4 leading-relaxed">Comprehensive business management solution with finance, HR, supply chain, and project management modules.</p>
+                        
+                        <div class="mb-4">
+                            <h4 class="font-semibold text-gray-900 mb-2 text-sm">Key Features:</h4>
+                            <div class="grid grid-cols-2 gap-2">
+                                <div class="flex items-center text-xs text-gray-600">
+                                    <div class="w-1.5 h-1.5 bg-purple-500 rounded-full mr-2"></div>
+                                    Financial Management
+                                </div>
+                                <div class="flex items-center text-xs text-gray-600">
+                                    <div class="w-1.5 h-1.5 bg-purple-500 rounded-full mr-2"></div>
+                                    Supply Chain
+                                </div>
+                                <div class="flex items-center text-xs text-gray-600">
+                                    <div class="w-1.5 h-1.5 bg-purple-500 rounded-full mr-2"></div>
+                                    HR Management
+                                </div>
+                                <div class="flex items-center text-xs text-gray-600">
+                                    <div class="w-1.5 h-1.5 bg-purple-500 rounded-full mr-2"></div>
+                                    Reporting
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <div class="flex flex-wrap gap-2 mb-4">
+                            <span class="px-2 py-1 bg-gray-100 text-gray-700 text-xs rounded">Angular</span>
+                            <span class="px-2 py-1 bg-gray-100 text-gray-700 text-xs rounded">Java</span>
+                            <span class="px-2 py-1 bg-gray-100 text-gray-700 text-xs rounded">Oracle</span>
+                            <span class="px-2 py-1 bg-gray-100 text-gray-700 text-xs rounded">Docker</span>
+                        </div>
+                        
+                        <div class="flex items-center justify-between">
+                            <div class="text-sm text-gray-500">500+ Companies</div>
+                            <button class="text-purple-600 hover:text-purple-700 font-semibold text-sm">View Details →</button>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Learning Management System -->
+                <div class="portfolio-item hover-lift bg-white rounded-2xl overflow-hidden shadow-lg" data-category="education">
+                    <div class="relative overflow-hidden group">
+                        <img src="/placeholder.svg?height=250&width=400&text=Learning+Management+System" alt="LMS Platform" class="w-full h-64 object-cover group-hover:scale-110 transition-transform duration-500">
+                        <div class="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300">
+                            <div class="absolute bottom-4 right-4 flex space-x-2">
+                                <button class="w-10 h-10 bg-white/20 backdrop-blur-sm rounded-lg flex items-center justify-center hover:bg-white/30 transition-colors">
+                                    <svg class="w-5 h-5 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14"></path>
+                                    </svg>
+                                </button>
+                                <button class="w-10 h-10 bg-white/20 backdrop-blur-sm rounded-lg flex items-center justify-center hover:bg-white/30 transition-colors">
+                                    <svg class="w-5 h-5 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4.318 6.318a4.5 4.5 0 000 6.364L12 20.364l7.682-7.682a4.5 4.5 0 00-6.364-6.364L12 7.636l-1.318-1.318a4.5 4.5 0 00-6.364 0z"></path>
+                                    </svg>
+                                </button>
+                            </div>
+                        </div>
+                        <div class="absolute top-4 left-4">
+                            <span class="px-3 py-1 bg-blue-500 text-white text-xs rounded-full font-medium">Education</span>
+                        </div>
+                    </div>
+                    <div class="p-6">
+                        <h3 class="text-xl font-bold text-gray-900 mb-3">Advanced LMS Platform</h3>
+                        <p class="text-gray-600 mb-4 leading-relaxed">Next-generation learning management system with video conferencing, AI-powered assessments, and collaborative tools.</p>
+                        
+                        <div class="mb-4">
+                            <h4 class="font-semibold text-gray-900 mb-2 text-sm">Key Features:</h4>
+                            <div class="grid grid-cols-2 gap-2">
+                                <div class="flex items-center text-xs text-gray-600">
+                                    <div class="w-1.5 h-1.5 bg-blue-500 rounded-full mr-2"></div>
+                                    Video Conferencing
+                                </div>
+                                <div class="flex items-center text-xs text-gray-600">
+                                    <div class="w-1.5 h-1.5 bg-blue-500 rounded-full mr-2"></div>
+                                    AI Assessments
+                                </div>
+                                <div class="flex items-center text-xs text-gray-600">
+                                    <div class="w-1.5 h-1.5 bg-blue-500 rounded-full mr-2"></div>
+                                    Progress Tracking
+                                </div>
+                                <div class="flex items-center text-xs text-gray-600">
+                                    <div class="w-1.5 h-1.5 bg-blue-500 rounded-full mr-2"></div>
+                                    Collaboration
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <div class="flex flex-wrap gap-2 mb-4">
+                            <span class="px-2 py-1 bg-gray-100 text-gray-700 text-xs rounded">React</span>
+                            <span class="px-2 py-1 bg-gray-100 text-gray-700 text-xs rounded">Express</span>
+                            <span class="px-2 py-1 bg-gray-100 text-gray-700 text-xs rounded">MySQL</span>
+                            <span class="px-2 py-1 bg-gray-100 text-gray-700 text-xs rounded">WebRTC</span>
+                        </div>
+                        
+                        <div class="flex items-center justify-between">
+                            <div class="text-sm text-gray-500">100,000+ Learners</div>
+                            <button class="text-blue-600 hover:text-blue-700 font-semibold text-sm">View Details →</button>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Hospital Management System -->
+                <div class="portfolio-item hover-lift bg-white rounded-2xl overflow-hidden shadow-lg" data-category="healthcare">
+                    <div class="relative overflow-hidden group">
+                        <img src="/placeholder.svg?height=250&width=400&text=Hospital+Management+System" alt="Hospital Management" class="w-full h-64 object-cover group-hover:scale-110 transition-transform duration-500">
+                        <div class="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300">
+                            <div class="absolute bottom-4 right-4 flex space-x-2">
+                                <button class="w-10 h-10 bg-white/20 backdrop-blur-sm rounded-lg flex items-center justify-center hover:bg-white/30 transition-colors">
+                                    <svg class="w-5 h-5 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14"></path>
+                                    </svg>
+                                </button>
+                                <button class="w-10 h-10 bg-white/20 backdrop-blur-sm rounded-lg flex items-center justify-center hover:bg-white/30 transition-colors">
+                                    <svg class="w-5 h-5 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4.318 6.318a4.5 4.5 0 000 6.364L12 20.364l7.682-7.682a4.5 4.5 0 00-6.364-6.364L12 7.636l-1.318-1.318a4.5 4.5 0 00-6.364 0z"></path>
+                                    </svg>
+                                </button>
+                            </div>
+                        </div>
+                        <div class="absolute top-4 left-4">
+                            <span class="px-3 py-1 bg-green-500 text-white text-xs rounded-full font-medium">Healthcare</span>
+                        </div>
+                    </div>
+                    <div class="p-6">
+                        <h3 class="text-xl font-bold text-gray-900 mb-3">Hospital Management System</h3>
+                        <p class="text-gray-600 mb-4 leading-relaxed">Complete hospital operations management with patient care coordination, staff scheduling, and resource optimization.</p>
+                        
+                        <div class="mb-4">
+                            <h4 class="font-semibold text-gray-900 mb-2 text-sm">Key Features:</h4>
+                            <div class="grid grid-cols-2 gap-2">
+                                <div class="flex items-center text-xs text-gray-600">
+                                    <div class="w-1.5 h-1.5 bg-green-500 rounded-full mr-2"></div>
+                                    Patient Care
+                                </div>
+                                <div class="flex items-center text-xs text-gray-600">
+                                    <div class="w-1.5 h-1.5 bg-green-500 rounded-full mr-2"></div>
+                                    Staff Management
+                                </div>
+                                <div class="flex items-center text-xs text-gray-600">
+                                    <div class="w-1.5 h-1.5 bg-green-500 rounded-full mr-2"></div>
+                                    Resource Allocation
+                                </div>
+                                <div class="flex items-center text-xs text-gray-600">
+                                    <div class="w-1.5 h-1.5 bg-green-500 rounded-full mr-2"></div>
+                                    Analytics
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <div class="flex flex-wrap gap-2 mb-4">
+                            <span class="px-2 py-1 bg-gray-100 text-gray-700 text-xs rounded">Next.js</span>
+                            <span class="px-2 py-1 bg-gray-100 text-gray-700 text-xs rounded">Django</span>
+                            <span class="px-2 py-1 bg-gray-100 text-gray-700 text-xs rounded">PostgreSQL</span>
+                            <span class="px-2 py-1 bg-gray-100 text-gray-700 text-xs rounded">Redis</span>
+                        </div>
+                        
+                        <div class="flex items-center justify-between">
+                            <div class="text-sm text-gray-500">500+ Beds</div>
+                            <button class="text-green-600 hover:text-green-700 font-semibold text-sm">View Details →</button>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Supply Chain Management -->
+                <div class="portfolio-item hover-lift bg-white rounded-2xl overflow-hidden shadow-lg" data-category="business">
+                    <div class="relative overflow-hidden group">
+                        <img src="/placeholder.svg?height=250&width=400&text=Supply+Chain+Management" alt="Supply Chain" class="w-full h-64 object-cover group-hover:scale-110 transition-transform duration-500">
+                        <div class="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300">
+                            <div class="absolute bottom-4 right-4 flex space-x-2">
+                                <button class="w-10 h-10 bg-white/20 backdrop-blur-sm rounded-lg flex items-center justify-center hover:bg-white/30 transition-colors">
+                                    <svg class="w-5 h-5 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14"></path>
+                                    </svg>
+                                </button>
+                                <button class="w-10 h-10 bg-white/20 backdrop-blur-sm rounded-lg flex items-center justify-center hover:bg-white/30 transition-colors">
+                                    <svg class="w-5 h-5 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4.318 6.318a4.5 4.5 0 000 6.364L12 20.364l7.682-7.682a4.5 4.5 0 00-6.364-6.364L12 7.636l-1.318-1.318a4.5 4.5 0 00-6.364 0z"></path>
+                                    </svg>
+                                </button>
+                            </div>
+                        </div>
+                        <div class="absolute top-4 left-4">
+                            <span class="px-3 py-1 bg-purple-500 text-white text-xs rounded-full font-medium">Business</span>
+                        </div>
+                    </div>
+                    <div class="p-6">
+                        <h3 class="text-xl font-bold text-gray-900 mb-3">Supply Chain Management</h3>
+                        <p class="text-gray-600 mb-4 leading-relaxed">End-to-end supply chain optimization with real-time tracking, predictive analytics, and automated workflows.</p>
+                        
+                        <div class="mb-4">
+                            <h4 class="font-semibold text-gray-900 mb-2 text-sm">Key Features:</h4>
+                            <div class="grid grid-cols-2 gap-2">
+                                <div class="flex items-center text-xs text-gray-600">
+                                    <div class="w-1.5 h-1.5 bg-purple-500 rounded-full mr-2"></div>
+                                    Real-time Tracking
+                                </div>
+                                <div class="flex items-center text-xs text-gray-600">
+                                    <div class="w-1.5 h-1.5 bg-purple-500 rounded-full mr-2"></div>
+                                    Inventory Management
+                                </div>
+                                <div class="flex items-center text-xs text-gray-600">
+                                    <div class="w-1.5 h-1.5 bg-purple-500 rounded-full mr-2"></div>
+                                    Supplier Management
+                                </div>
+                                <div class="flex items-center text-xs text-gray-600">
+                                    <div class="w-1.5 h-1.5 bg-purple-500 rounded-full mr-2"></div>
+                                    Predictive Analytics
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <div class="flex flex-wrap gap-2 mb-4">
+                            <span class="px-2 py-1 bg-gray-100 text-gray-700 text-xs rounded">React</span>
+                            <span class="px-2 py-1 bg-gray-100 text-gray-700 text-xs rounded">Spring Boot</span>
+                            <span class="px-2 py-1 bg-gray-100 text-gray-700 text-xs rounded">MongoDB</span>
+                            <span class="px-2 py-1 bg-gray-100 text-gray-700 text-xs rounded">Kubernetes</span>
+                        </div>
+                        
+                        <div class="flex items-center justify-between">
+                            <div class="text-sm text-gray-500">200+ Locations</div>
+                            <button class="text-purple-600 hover:text-purple-700 font-semibold text-sm">View Details →</button>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- AI-Powered Analytics Platform -->
+                <div class="portfolio-item hover-lift bg-white rounded-2xl overflow-hidden shadow-lg" data-category="custom">
+                    <div class="relative overflow-hidden group">
+                        <img src="/placeholder.svg?height=250&width=400&text=AI+Analytics+Platform" alt="AI Analytics" class="w-full h-64 object-cover group-hover:scale-110 transition-transform duration-500">
+                        <div class="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300">
+                            <div class="absolute bottom-4 right-4 flex space-x-2">
+                                <button class="w-10 h-10 bg-white/20 backdrop-blur-sm rounded-lg flex items-center justify-center hover:bg-white/30 transition-colors">
+                                    <svg class="w-5 h-5 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14"></path>
+                                    </svg>
+                                </button>
+                                <button class="w-10 h-10 bg-white/20 backdrop-blur-sm rounded-lg flex items-center justify-center hover:bg-white/30 transition-colors">
+                                    <svg class="w-5 h-5 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4.318 6.318a4.5 4.5 0 000 6.364L12 20.364l7.682-7.682a4.5 4.5 0 00-6.364-6.364L12 7.636l-1.318-1.318a4.5 4.5 0 00-6.364 0z"></path>
+                                    </svg>
+                                </button>
+                            </div>
+                        </div>
+                        <div class="absolute top-4 left-4">
+                            <span class="px-3 py-1 bg-orange-500 text-white text-xs rounded-full font-medium">Custom</span>
+                        </div>
+                    </div>
+                    <div class="p-6">
+                        <h3 class="text-xl font-bold text-gray-900 mb-3">AI-Powered Analytics</h3>
+                        <p class="text-gray-600 mb-4 leading-relaxed">Custom machine learning platform with predictive analytics, automated insights, and real-time data visualization.</p>
+                        
+                        <div class="mb-4">
+                            <h4 class="font-semibold text-gray-900 mb-2 text-sm">Key Features:</h4>
+                            <div class="grid grid-cols-2 gap-2">
+                                <div class="flex items-center text-xs text-gray-600">
+                                    <div class="w-1.5 h-1.5 bg-orange-500 rounded-full mr-2"></div>
+                                    Machine Learning
+                                </div>
+                                <div class="flex items-center text-xs text-gray-600">
+                                    <div class="w-1.5 h-1.5 bg-orange-500 rounded-full mr-2"></div>
+                                    Predictive Analytics
+                                </div>
+                                <div class="flex items-center text-xs text-gray-600">
+                                    <div class="w-1.5 h-1.5 bg-orange-500 rounded-full mr-2"></div>
+                                    Data Visualization
+                                </div>
+                                <div class="flex items-center text-xs text-gray-600">
+                                    <div class="w-1.5 h-1.5 bg-orange-500 rounded-full mr-2"></div>
+                                    Automated Insights
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <div class="flex flex-wrap gap-2 mb-4">
+                            <span class="px-2 py-1 bg-gray-100 text-gray-700 text-xs rounded">Python</span>
+                            <span class="px-2 py-1 bg-gray-100 text-gray-700 text-xs rounded">TensorFlow</span>
+                            <span class="px-2 py-1 bg-gray-100 text-gray-700 text-xs rounded">Apache Spark</span>
+                            <span class="px-2 py-1 bg-gray-100 text-gray-700 text-xs rounded">Elasticsearch</span>
+                        </div>
+                        
+                        <div class="flex items-center justify-between">
+                            <div class="text-sm text-gray-500">1TB+ Data Processed</div>
+                            <button class="text-orange-600 hover:text-orange-700 font-semibold text-sm">View Details →</button>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- IoT Management Platform -->
+                <div class="portfolio-item hover-lift bg-white rounded-2xl overflow-hidden shadow-lg" data-category="custom">
+                    <div class="relative overflow-hidden group">
+                        <img src="/placeholder.svg?height=250&width=400&text=IoT+Management+Platform" alt="IoT Platform" class="w-full h-64 object-cover group-hover:scale-110 transition-transform duration-500">
+                        <div class="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300">
+                            <div class="absolute bottom-4 right-4 flex space-x-2">
+                                <button class="w-10 h-10 bg-white/20 backdrop-blur-sm rounded-lg flex items-center justify-center hover:bg-white/30 transition-colors">
+                                    <svg class="w-5 h-5 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14"></path>
+                                    </svg>
+                                </button>
+                                <button class="w-10 h-10 bg-white/20 backdrop-blur-sm rounded-lg flex items-center justify-center hover:bg-white/30 transition-colors">
+                                    <svg class="w-5 h-5 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4.318 6.318a4.5 4.5 0 000 6.364L12 20.364l7.682-7.682a4.5 4.5 0 00-6.364-6.364L12 7.636l-1.318-1.318a4.5 4.5 0 00-6.364 0z"></path>
+                                    </svg>
+                                </button>
+                            </div>
+                        </div>
+                        <div class="absolute top-4 left-4">
+                            <span class="px-3 py-1 bg-orange-500 text-white text-xs rounded-full font-medium">Custom</span>
+                        </div>
+                    </div>
+                    <div class="p-6">
+                        <h3 class="text-xl font-bold text-gray-900 mb-3">IoT Management Platform</h3>
+                        <p class="text-gray-600 mb-4 leading-relaxed">Comprehensive IoT device management with real-time monitoring, automated alerts, and edge computing capabilities.</p>
+                        
+                        <div class="mb-4">
+                            <h4 class="font-semibold text-gray-900 mb-2 text-sm">Key Features:</h4>
+                            <div class="grid grid-cols-2 gap-2">
+                                <div class="flex items-center text-xs text-gray-600">
+                                    <div class="w-1.5 h-1.5 bg-orange-500 rounded-full mr-2"></div>
+                                    Device Management
+                                </div>
+                                <div class="flex items-center text-xs text-gray-600">
+                                    <div class="w-1.5 h-1.5 bg-orange-500 rounded-full mr-2"></div>
+                                    Real-time Monitoring
+                                </div>
+                                <div class="flex items-center text-xs text-gray-600">
+                                    <div class="w-1.5 h-1.5 bg-orange-500 rounded-full mr-2"></div>
+                                    Edge Computing
+                                </div>
+                                <div class="flex items-center text-xs text-gray-600">
+                                    <div class="w-1.5 h-1.5 bg-orange-500 rounded-full mr-2"></div>
+                                    Automated Alerts
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <div class="flex flex-wrap gap-2 mb-4">
+                            <span class="px-2 py-1 bg-gray-100 text-gray-700 text-xs rounded">Node.js</span>
+                            <span class="px-2 py-1 bg-gray-100 text-gray-700 text-xs rounded">MQTT</span>
+                            <span class="px-2 py-1 bg-gray-100 text-gray-700 text-xs rounded">InfluxDB</span>
+                            <span class="px-2 py-1 bg-gray-100 text-gray-700 text-xs rounded">Grafana</span>
+                        </div>
+                        
+                        <div class="flex items-center justify-between">
+                            <div class="text-sm text-gray-500">50,000+ Devices</div>
+                            <button class="text-orange-600 hover:text-orange-700 font-semibold text-sm">View Details →</button>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- CTA Section -->
+    <section class="py-24 bg-gradient-to-br from-primary-600 to-purple-700">
+        <div class="max-w-7xl mx-auto px-6 text-center">
+            <h2 class="text-4xl md:text-5xl font-bold text-white mb-6">Ready to Start Your Project?</h2>
+            <p class="text-xl text-blue-100 max-w-3xl mx-auto mb-12">
+                Let's discuss how we can transform your business with our innovative solutions. Get in touch with our team today.
+            </p>
+            
+            <div class="flex flex-col sm:flex-row gap-6 justify-center">
+                <button class="bg-white text-primary-600 hover:bg-gray-100 text-lg px-10 py-4 rounded-xl transition-all duration-300 hover:scale-105 hover:shadow-2xl font-semibold">
+                    Start Your Project
+                    <svg class="inline-block ml-2 w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 7l5 5m0 0l-5 5m5-5H6"></path>
+                    </svg>
+                </button>
+                <button class="border-2 border-white text-white hover:bg-white hover:text-primary-600 text-lg px-10 py-4 rounded-xl transition-all duration-300 hover:scale-105 font-semibold">
+                    View Case Studies
+                </button>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-gray-900 text-white py-12">
+        <div class="max-w-7xl mx-auto px-6">
+            <div class="flex flex-col md:flex-row justify-between items-center">
+                <div class="flex items-center space-x-3 mb-4 md:mb-0">
+                    <img src="assets/images/logo.png" alt="Saafi Systems" class="w-8 h-8">
+                    <span class="text-lg font-bold">Saafi Systems</span>
+                </div>
+                
+                <div class="flex space-x-6 text-sm">
+                    <a href="index.html" class="text-gray-300 hover:text-white transition-colors">Home</a>
+                    <a href="testimonials.html" class="text-gray-300 hover:text-white transition-colors">Testimonials</a>
+                    <a href="privacy.html" class="text-gray-300 hover:text-white transition-colors">Privacy Policy</a>
+                    <a href="terms.html" class="text-gray-300 hover:text-white transition-colors">Terms of Service</a>
+                </div>
+            </div>
+            
+            <div class="border-t border-gray-800 mt-8 pt-8 text-center text-gray-400 text-sm">
+                <p>&copy; 2024 Saafi Systems. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- JavaScript -->
+    <script>
+        // Filter functionality
+        const filterButtons = document.querySelectorAll('.filter-btn');
+        const portfolioItems = document.querySelectorAll('.portfolio-item');
+
+        filterButtons.forEach(button => {
+            button.addEventListener('click', () => {
+                // Remove active class from all buttons
+                filterButtons.forEach(btn => btn.classList.remove('active'));
+                // Add active class to clicked button
+                button.classList.add('active');
+
+                const filterValue = button.getAttribute('data-filter');
+
+                portfolioItems.forEach(item => {
+                    if (filterValue === 'all' || item.getAttribute('data-category') === filterValue) {
+                        item.style.display = 'block';
+                        item.style.animation = 'fadeIn 0.5s ease-out';
+                    } else {
+                        item.style.display = 'none';
+                    }
+                });
+            });
+        });
+
+        // Smooth scrolling for anchor links
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                const target = document.querySelector(this.getAttribute('href'));
+                if (target) {
+                    target.scrollIntoView({
+                        behavior: 'smooth',
+                        block: 'start'
+                    });
+                }
+            });
+        });
+
+        // Intersection Observer for animations
+        const observerOptions = {
+            threshold: 0.1,
+            rootMargin: '0px 0px -50px 0px'
+        };
+
+        const observer = new IntersectionObserver(function(entries) {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.style.animation = 'slideUp 0.8s ease-out';
+                }
+            });
+        }, observerOptions);
+
+        // Observe portfolio items for animation
+        portfolioItems.forEach(item => {
+            observer.observe(item);
+        });
+    </script>
+</body>
+</html>
